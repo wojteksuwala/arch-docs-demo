@@ -13,6 +13,8 @@ Bob -> Alice: Hi!
 ```
 </div>
 
+![](firstDiagram.svg)
+
 Diagram 2
 
 ```mermaid
