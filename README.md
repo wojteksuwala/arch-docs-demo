@@ -2,12 +2,16 @@
 
 Diagram 1
 
+<div hidden>
+```
 @startuml firstDiagram
 
 Alice -> Bob: Hello
 Bob -> Alice: Hi!
 		
 @enduml
+```
+</div>
 
 Diagram 2
 
