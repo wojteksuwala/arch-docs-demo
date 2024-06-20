@@ -2,6 +2,15 @@
 
 Diagram 1
 
+@startuml firstDiagram
+
+Alice -> Bob: Hello
+Bob -> Alice: Hi!
+		
+@enduml
+
+Diagram 2
+
 ```mermaid
     C4Context
       title System Context diagram for Internet Banking System
