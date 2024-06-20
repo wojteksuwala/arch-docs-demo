@@ -2,20 +2,7 @@
 
 Diagram 1
 
-<div hidden>
-```
-@startuml firstDiagram
 
-Alice -> Bob: Hello
-Bob -> Alice: Hi!
-		
-@enduml
-```
-</div>
-
-![](firstDiagram.svg)
-
-Diagram 2
 
 ```mermaid
     C4Context
