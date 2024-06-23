@@ -25,11 +25,9 @@ Below you can find sample diagrams created with Mermaid.
 
             Rel(falconSystem, g2iSystem, "Get customer financial data")
             Rel(falconSystem, ckkSystem, "Search for, add or update customer")
-
-UpdateLayoutConfig($c4ShapeInRow="10", $c4BoundaryInRow="2")
         }
 
-        
+        UpdateLayoutConfig($c4ShapeInRow="4", $c4BoundaryInRow="2")
 ```
 Diagram 1
 ```mermaid
