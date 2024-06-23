@@ -88,7 +88,14 @@ Component diagram for policy service.
 
         Component(pricingService, "PricingService", "C#, Refit Http Client", "Http client for pricing service")
         Component(offer, "Offer", "C#, Aggregate Root", "Offer agg. rooot")
-        Component(offerRepo, "OfferRepository", "C#, NHibernate", "Saves/loads offers")        
+        Component(offerRepo, "OfferRepository", "C#, NHibernate", "Saves/loads offers")
+
+        Rel(offerController, createOffer, "Uses")
+        Rel(offerController, getOffer, "Uses")
+
+        Rel(createOffer,pricingService,"Calc price")
+        Rel(createOffer,offer,"Creates offer")
+        Rel(createOffer,offerRepo,"Save")
     }
 
     ContainerDb(pricingServiceDb, "Tariffs db", "Postgresql 16" , "Tariffs")
