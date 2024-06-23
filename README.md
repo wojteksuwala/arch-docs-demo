@@ -1,9 +1,17 @@
-# arch-docs-demo
+# Documemnting architecture demo repository
+Below you can find sample diagrams created with Mermaid.
 
+## System context diagram
+
+```mermaid
+    C4Context
+        title System Context Diagram for Financial Products Sales System
+        Enterprise_Boundary(b0, "BankBoundary0") {
+            Person(bankSalesPerson, "Bank salesperson", "A bank employee who sells financial products.")
+            Person(riskTeamPerson, "Risk Team Member", "A bank employee who performs risk analysis")
+        }
+```
 Diagram 1
-
-
-
 ```mermaid
     C4Context
       title System Context diagram for Internet Banking System
