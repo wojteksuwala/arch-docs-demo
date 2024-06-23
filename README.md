@@ -56,4 +56,12 @@ Container diagram that presents part of the sales portal for insurance agents.
     Rel(spa,apiGw, "Makes API calls", "REST JSON/HTTP")
     Rel(apiGw, productCatalog, "Get products", "REST JSON/HTTP")
     Rel(productCatalog, productCatalogDb, "Reads/writes data", "MongoClient")
+
+    Rel(apiGw, policyService, "Create offers and policies", "REST JSON/HTTP")
+    Rel(policyService, policyServiceDb, "Reads/writes data", "NHibernate")
+
+    Rel(policyService, pricingService, "calc price", "REST JSON/HTTP")
+    Rel(pricingService, pricingServiceDb, "Reads/writes data", "Marten")
+
+    UpdateLayoutConfig($c4ShapeInRow="3", $c4BoundaryInRow="1")
 ```
