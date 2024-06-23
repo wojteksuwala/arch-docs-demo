@@ -96,7 +96,14 @@ Component diagram for policy service.
         Rel(createOffer,pricingService,"Calc price")
         Rel(createOffer,offer,"Creates offer")
         Rel(createOffer,offerRepo,"Save")
+
+        Rel(getOffer,offerRepo,"Load offer")   
     }
 
-    ContainerDb(pricingServiceDb, "Tariffs db", "Postgresql 16" , "Tariffs")
+    ContainerDb(policiesDb, "Policies db", "Postgresql 16" , "offers and policies")
+
+    Rel(offerRepo,policiesDb,"Save/load data","Nhibernate")
+
+    UpdateLayoutConfig($c4ShapeInRow="2", $c4BoundaryInRow="1")
+```
 ```
