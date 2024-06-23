@@ -91,5 +91,5 @@ Component diagram for policy service.
         Component(offerRepo, "OfferRepository", "C#, NHibernate", "Saves/loads offers")        
     }
 
-    ContanerDb(pricingServiceDb, "Tariffs db", "Postgresql 16" , "Tariffs")
+    ContainerDb(pricingServiceDb, "Tariffs db", "Postgresql 16" , "Tariffs")
 ```
