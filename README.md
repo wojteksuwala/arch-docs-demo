@@ -45,8 +45,12 @@ Container diagram that presents part of the sales portal for insurance agents.
     Container(apiGw, "API Gateway", ".net core, Ocelot", "Gives SPA apps access to microservices")
 
     Container(productCatalog, "Product catalog", ".net core, minimal API, MongoClient", "Provides access to list of<br/> insurance products and their details")
+    Container(policyService, "Policy Service", ".net core, minimal API, NHibernate", "Manages offers,<br/> and policies")
+    Container(pricingService, "Pricing Service", ".net core, minimal API, Marten", "Calculates prices")
 
     ContainerDb(productCatalogDb, "Product catalog db", "Mongodb" , "Products data")
+    ContainerDb(policyServiceDb, "Policies db", "Postgresql 16" , "Offers and policies")
+    ContainerDb(pricingServiceDb, "Tariffs db", "Postgresql 16" , "Tariffs")
 
     Rel(salesAgent,spa,"searches for product, creates offers, sells policies, reviews sales stats, chats with other")
     Rel(spa,apiGw, "Makes API calls", "REST JSON/HTTP")
