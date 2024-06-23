@@ -28,7 +28,7 @@ System context diagram for a system that manages the sales process of financial 
             Rel(falconSystem, ckkSystem, "Search for, add or update customer")
         }
 
-        UpdateLayoutConfig($c4ShapeInRow="2", $c4BoundaryInRow="1")
+        UpdateLayoutConfig($c4ShapeInRow="3", $c4BoundaryInRow="1")
 ```
 
 ## Container diagram
