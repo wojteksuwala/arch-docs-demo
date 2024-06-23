@@ -10,12 +10,12 @@ Below you can find sample diagrams created with Mermaid.
         Person(customerD, "Banking Customer D", "A customer of the bank, <br/> with personal bank accounts.")
 
         Enterprise_Boundary(b0, "Bank") {
-            Person(bankSalesPerson, "Bank salesperson", "A bank employee who sells financial products.")
-            Person(riskTeamPerson, "Risk Team Member", "A bank employee who performs risk analysis")
+            Person(bankSalesPerson, "Bank salesperson", "A bank employee <br/>who sells financial products.")
+            Person(riskTeamPerson, "Risk Team Member", "A bank employee <br/>who performs risk analysis")
 
             System(falconSystem, "Falcon", "System that handles sales process for financial car/agro leasing.")
 
-            System_Ext(g2iSystem, "G2I", "Gateway to gov and commercial services that aggregate customers financial data.")
+            System_Ext(g2iSystem, "G2I", "Gateway to gov and commercial services <br/>that aggregate customers financial data.")
             System_Ext(ckkSystem, "CKK", "Bank Main customer repository.")
 
             Rel(bankSalesPerson, falconSystem, "Create offers/contracts")
@@ -24,6 +24,8 @@ Below you can find sample diagrams created with Mermaid.
             Rel(falconSystem, g2iSystem, "Get customer financial data")
             Rel(falconSystem, ckkSystem, "Search for, add or update customer")
         }
+
+        UpdateLayoutConfig($c4ShapeInRow="3", $c4BoundaryInRow="1")
 ```
 Diagram 1
 ```mermaid
