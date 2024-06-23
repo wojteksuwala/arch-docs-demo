@@ -92,7 +92,6 @@ Component diagram for policy service.
 
         Rel(offerController, createOffer, "Uses")
         Rel(offerController, getOffer, "Uses")
-        UpdateRelStyle(offerController, getOffer, $offsetY="-140")
 
         Rel(createOffer,pricingService,"Calc price")
         Rel(createOffer,offer,"Creates offer")
