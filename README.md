@@ -106,6 +106,6 @@ Component diagram for policy service.
 
     Rel(offerRepo,policiesDb,"Save/load data","Nhibernate")
 
-    UpdateLayoutConfig($c4ShapeInRow="2", $c4BoundaryInRow="1")
+    UpdateLayoutConfig($c4ShapeInRow="3", $c4BoundaryInRow="1")
 ```
 ```
