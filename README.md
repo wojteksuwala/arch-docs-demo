@@ -45,4 +45,11 @@ Container diagram that presents part of the sales portal for insurance agents.
     Container(apiGw, "API Gateway", ".net core, Ocelot", "Gives SPA apps access to microservices")
 
     Container(productCatalog, "Product catalog", ".net core, minimal API, MongoClient", "Provides access to list of<br/> insurance products and their details")
+
+    ContainerDb(productCatalogDb, "Product catalog db", "Mongodb" , "Products data")
+
+    Rel(salesAgent,spa,"searches for product, creates offers, sells policies, reviews sales stats, chats with other")
+    Rel(spa,apiGw, "Makes API calls", "REST JSON/HTTP")
+    Rel(apiGw, productCatalog, "Get products", "REST JSON/HTTP")
+    Rel(productCatalog, productCatalogDb, "Reads/writes data", "MongoClient")
 ```
