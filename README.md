@@ -10,7 +10,9 @@ Below you can find sample diagrams created with Mermaid.
             Person(bankSalesPerson, "Bank salesperson", "A bank employee who sells financial products.")
             Person(riskTeamPerson, "Risk Team Member", "A bank employee who performs risk analysis")
 
-            System(falconSystem, "Falcon", "System that handles sales process for financial car/agro leasing and long term rent, including risk analysis. It is main registry of offers and contracts.")
+            System(falconSystem, "Falcon", "System that handles sales process for financial car/agro\r\n leasing and long term rent, including risk analysis. It is main registry of offers and contracts.")
+
+            Rel(falconSystem, bankSalesPerson, "Create offers/contracts")
         }
 ```
 Diagram 1
