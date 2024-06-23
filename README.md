@@ -7,7 +7,7 @@ Below you can find sample diagrams created with Mermaid.
     C4Context
         title System Context Diagram for Financial Products Sales System
 
-        Person(customerD, "Banking Customer D", "A customer of the bank, <br/> with personal bank accounts.")
+        Person(carDealer, "Car dealer", "Sells car leasing with cars.")
 
         Enterprise_Boundary(b0, "Bank") {
             Person(bankSalesPerson, "Bank salesperson", "A bank employee <br/>who sells financial products.")
@@ -18,6 +18,7 @@ Below you can find sample diagrams created with Mermaid.
             System_Ext(g2iSystem, "G2I", "Gateway to gov and commercial services <br/>that aggregate customers financial data.")
             System_Ext(ckkSystem, "CKK", "Bank Main customer repository.")
 
+            Rel(carDealer, falconSystem, "Creates offers<br/> and contract")
             Rel(bankSalesPerson, falconSystem, "Create offers/contracts")
             Rel(riskTeamPerson, falconSystem, "Performs risk analysis")
 
