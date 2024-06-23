@@ -6,9 +6,11 @@ Below you can find sample diagrams created with Mermaid.
 ```mermaid
     C4Context
         title System Context Diagram for Financial Products Sales System
-        Enterprise_Boundary(b0, "BankBoundary0") {
+        Enterprise_Boundary(b0, "Bank") {
             Person(bankSalesPerson, "Bank salesperson", "A bank employee who sells financial products.")
             Person(riskTeamPerson, "Risk Team Member", "A bank employee who performs risk analysis")
+
+            System(falconSystem, "Falcon", "System that handles sales process for financial car/agro leasing and long term rent, including risk analysis. It is main registry of offers and contracts.")
         }
 ```
 Diagram 1
