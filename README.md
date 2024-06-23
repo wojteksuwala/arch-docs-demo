@@ -100,7 +100,9 @@ Component diagram for policy service.
         Rel(getOffer,offerRepo,"Load offer")   
     }
 
-    ContainerDb(policiesDb, "Policies db", "Postgresql 16" , "offers and policies")
+    Container_Boundary(db, "Database") {
+        ContainerDb(policiesDb, "Policies db", "Postgresql 16" , "offers and policies")
+    }
 
     Rel(offerRepo,policiesDb,"Save/load data","Nhibernate")
 
