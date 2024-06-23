@@ -1,0 +1,5 @@
+@startuml
+interface "CalculatePrice" as CP
+CP - [Pricing Service]
+[Pricing Service] ..> PricingDb : use
+@enduml

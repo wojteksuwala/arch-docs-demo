@@ -1,0 +1,11 @@
+@startuml
+actor InsuranceAgent  
+
+InsuranceAgent -> OfferController
+OfferController -> CreateOfferHandler: Handle
+CreateOfferHandler -> PricingServiceClient: CalculatePrice
+PricingServiceClient --> CreateOfferHandler: offerPrice
+CreateOfferHandler -> Offer: Create
+CreateOfferHandler -> OfferRepository: Add
+CreateOfferHandler --> OfferController: created offer id
+@enduml

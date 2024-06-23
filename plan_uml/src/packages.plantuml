@@ -1,0 +1,16 @@
+@startuml
+
+package "Controllers" #DDDDDD {
+OfferController <|-- ControllerBase
+}
+
+package "Handlers" {
+CreateOffer <|-- Handler
+GetOffer <|-- Handler
+ConvertOffer <|-- Handler
+}
+
+OfferController --> CreateOffer
+OfferController --> GetOffer
+OfferController --> ConvertOffer
+@enduml

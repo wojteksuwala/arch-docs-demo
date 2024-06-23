@@ -1,0 +1,30 @@
+@startuml
+abstract AggregateRoot {
+    +id: UUID
+}
+
+class Offer  {
+    offerNumber: String
+    {static} + Create(offerParams)
+    +Policy ConvertToPolicy(purchase date, customerId)
+}
+
+class Price <<ValueObject>> {
+
+}
+
+class Product <<AggregateRoot>> {
+
+}
+
+class Customer <<ValueObject>> {}
+
+Offer <|-- AggregateRoot
+
+Offer *-- "1" Price 
+Offer *-- "1" Customer
+
+Offer --> Product :forProduct
+
+note top of Product : Product is another aggregate.
+@enduml
