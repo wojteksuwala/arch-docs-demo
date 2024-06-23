@@ -40,16 +40,16 @@ Container diagram that presents part of the sales portal for insurance agents.
 
     Person(salesAgent,"Sales agent", "Person who works for an insurance agency")
 
-    Container_Boundary(b0) {
+    Container_Boundary(b0,"") {
     Container(spa, "Agent Frontend Single-Page App", "Blazor WASM", "Agents login, browse products,<br/> create offers and sell policies,<br/> review their sales stats,<br/> chat with each other")
     }
 
-    Container_Boundary(b1) {
+    Container_Boundary(b1,"") {
     Container(apiGw, "API Gateway", ".net core, Ocelot", "Gives SPA apps access to microservices")
     }
 
 
-    Container_Boundary(b2) {
+    Container_Boundary(b2,"") {
     Container(productCatalog, "Product catalog", ".net core, minimal API, MongoClient", "Provides access to list of<br/> insurance products and their details")
     Container(policyService, "Policy Service", ".net core, minimal API, NHibernate", "Manages offers,<br/> and policies")
     Container(pricingService, "Pricing Service", ".net core, minimal API, Marten", "Calculates prices")
