@@ -72,3 +72,24 @@ Container diagram that presents part of the sales portal for insurance agents.
 
     UpdateLayoutConfig($c4ShapeInRow="3", $c4BoundaryInRow="1")
 ```
+
+## Component diagram
+Component diagram for policy service.
+
+```mermaid
+    C4Component
+    title Component diagram for Policy Service
+
+    Container_Boundary(policyService, "Policy Service") {
+        Component(offerController, "OfferController", "C# Web API Controller", "Exposes REST API for offer management")
+
+        Component(createOffer, "CreateOffer", "C#,MediatR Handler", "creates offer")
+        Component(getOffer, "GetOffer", "C#,MediatR Handler", "retrieves offer")
+
+        Component(pricingService, "PricingService", "C#, Refit Http Client", "Http client for pricing service")
+        Component(offer, "Offer", "C#, Aggregate Root", "Offer agg. rooot")
+        Component(offerRepo, "OfferRepository", "C#, NHibernate", "Saves/loads offers")        
+    }
+
+    ContanerDb(pricingServiceDb, "Tariffs db", "Postgresql 16" , "Tariffs")
+```
